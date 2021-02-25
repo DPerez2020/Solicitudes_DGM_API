@@ -7,8 +7,9 @@ namespace Solicitudes_DGM.Api
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using Microsoft.OpenApi.Models;
+    using Solicitudes_DGM.Application.Persona;
     using Solicitudes_DGM.Persistence;
-
+    using Solicitudes_DGM.Persistence.Persona;
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -28,6 +29,12 @@ namespace Solicitudes_DGM.Api
 
             services.AddDbContext<SolicitudesDBContext>(options =>
             options.UseSqlServer(this.Configuration.GetConnectionString("dbConnection")));
+
+            //Repositorios
+            services.AddScoped<IPersonaRepository, PersonaRepository>();
+
+            //Servicios
+            services.AddScoped<IPersonaService, PersonaService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

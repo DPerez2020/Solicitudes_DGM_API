@@ -1,9 +1,9 @@
 ﻿namespace Solicitudes_DGM.Domain.Entities.Persona
 {
-    using Solicitudes_DGM.Domain.Entities.Solicitud;
-    using Solicitudes_DGM.Domain.Enums;
     using System;
     using System.Collections.Generic;
+    using Solicitudes_DGM.Domain.Entities.Solicitud;
+    using Solicitudes_DGM.Domain.Enums;
 
     public class Persona
     {
