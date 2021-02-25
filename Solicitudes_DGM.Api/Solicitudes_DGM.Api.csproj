@@ -11,5 +11,7 @@
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
-
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>../style.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
 </Project>
