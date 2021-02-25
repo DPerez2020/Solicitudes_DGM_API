@@ -21,6 +21,5 @@
         public virtual Persona Persona { get; set; }
 
         public virtual Estado Estado { get; set; }
-
     }
 }
