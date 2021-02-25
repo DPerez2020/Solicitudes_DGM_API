@@ -1,8 +1,8 @@
 ﻿namespace Solicitudes_DGM.Domain.Entities.Solicitud
 {
-    using System;
     using Solicitudes_DGM.Domain.Entities.Estado;
     using Solicitudes_DGM.Domain.Entities.Persona;
+    using System;
 
     public class Solicitud
     {
