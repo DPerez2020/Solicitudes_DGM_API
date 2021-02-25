@@ -1,8 +1,8 @@
-﻿namespace Solicitudes_DGM.Domain.Entities.Persona
+﻿namespace Solicitudes_DGM.Application.Persona
 {
     using FluentValidation;
 
-    public class PersonaValidator : AbstractValidator<Persona>
+    public class PersonaValidator : AbstractValidator<Domain.Entities.Persona.Persona>
     {
         public PersonaValidator()
         {
