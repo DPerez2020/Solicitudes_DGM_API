@@ -42,6 +42,10 @@
             this.RuleFor(x => x.FechaNacimiento)
                 .NotNull()
                 .WithMessage("Debe Ingresar la fecha de nacimiento");
+
+            this.RuleFor(x => x.Estatus)
+                .NotNull()
+                .WithMessage("El estatus no puede estar vacio");
         }
     }
 }

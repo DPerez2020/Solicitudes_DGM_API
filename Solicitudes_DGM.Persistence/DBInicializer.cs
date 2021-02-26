@@ -23,19 +23,19 @@
             {
             new Domain.Entities.Persona.Persona {
                 Nombre = "Dawin" , Apellido = "Perez",
-                Direccion="Los rios",Sexo=Sexo.M,
+                Direccion="Los rios",Sexo=Sexo.M.ToString(),
                 Estatus=true,Pasaporte="123456789",FechaNacimiento=DateTime.Parse("2001-05-04"),
                 FechaCreacion=DateTime.Now,FechaModificacion=DateTime.Now,Foto = "",
             },
             new Domain.Entities.Persona.Persona{
                 Nombre = "Frederick" , Apellido = "Luciano",
-                Direccion="Charles summer",Sexo=Sexo.M,
+                Direccion="Charles summer",Sexo=Sexo.M.ToString(),
                 Estatus=true,Pasaporte="123456879",FechaNacimiento=DateTime.Parse("2001-05-04"),
                 FechaCreacion=DateTime.Now,FechaModificacion=DateTime.Now,Foto = "",
             },
             new Domain.Entities.Persona.Persona{
                 Nombre = "Pedro" , Apellido = "Sosa",
-                Direccion="Pantoja",Sexo=Sexo.M,
+                Direccion="Pantoja",Sexo=Sexo.M.ToString(),
                 Estatus=true,Pasaporte="123456793",FechaNacimiento=DateTime.Parse("2001-05-04"),
                 FechaCreacion=DateTime.Now,FechaModificacion=DateTime.Now,Foto = "",
             }

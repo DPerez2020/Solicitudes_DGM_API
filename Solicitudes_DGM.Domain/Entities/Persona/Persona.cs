@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using Solicitudes_DGM.Domain.Entities.Solicitud;
-    using Solicitudes_DGM.Domain.Enums;
 
     public class Persona
     {
@@ -19,7 +18,7 @@
 
         public string Direccion { get; set; }
 
-        public Sexo Sexo { get; set; }
+        public string Sexo { get; set; }
 
         public string Foto { get; set; }
 
