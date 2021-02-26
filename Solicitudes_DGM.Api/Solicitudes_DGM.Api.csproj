@@ -25,5 +25,6 @@
   </ItemGroup>
   <PropertyGroup>
     <CodeAnalysisRuleSet>../style.ruleset</CodeAnalysisRuleSet>
+    <OutputType>WinExe</OutputType>
   </PropertyGroup>
 </Project>

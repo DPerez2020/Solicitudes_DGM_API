@@ -1,5 +1,6 @@
 ﻿namespace Solicitudes_DGM.Api.Controllers
 {
+    using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
@@ -44,6 +45,10 @@
         {
             try
             {
+                persona.FechaModificacion = DateTime.Now;
+                persona.Estatus = true;
+                persona.Foto = "";
+                persona.FechaCreacion = DateTime.Now;
                 return await this.personaService.InsertValidate(persona);
             }
             catch (System.Exception)
@@ -53,8 +58,8 @@
         }
 
         // PUT api/<PersonaController>/5
-        [HttpPut("{id}")]
-        public async Task<Domain.Entities.Persona.Persona> Put(int id, [FromBody] Domain.Entities.Persona.Persona persona)
+        [HttpPut]
+        public async Task<Domain.Entities.Persona.Persona> Put([FromBody] Domain.Entities.Persona.Persona persona)
         {
             try
             {
@@ -64,7 +69,7 @@
         }
 
         // DELETE api/<PersonaController>/5
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int}")]
         public async Task Delete(int id)
         {
             try
