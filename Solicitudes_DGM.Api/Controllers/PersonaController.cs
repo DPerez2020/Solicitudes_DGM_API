@@ -18,10 +18,17 @@
 
         // GET: api/<PersonaController>
         [HttpGet]
-        public async Task<IEnumerable<Domain.Entities.Persona.Persona>> Get()
+        public async Task<IEnumerable<PersonaModel>> Get()
         {
-            var lista = await this.personaService.GetAll();
-            return lista;
+            try
+            {
+                var lista = await this.personaService.GetAll();
+                return lista;
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
         }
 
         // GET api/<PersonaController>/5
@@ -33,20 +40,23 @@
 
         // POST api/<PersonaController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<Domain.Entities.Persona.Persona> Post([FromBody] Domain.Entities.Persona.Persona persona)
         {
+            return await this.personaService.Insert(persona);
         }
 
         // PUT api/<PersonaController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<Domain.Entities.Persona.Persona> Put(int id, [FromBody] Domain.Entities.Persona.Persona persona)
         {
+            return await this.personaService.Update(persona);
         }
 
         // DELETE api/<PersonaController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
+            await this.personaService.Delete(id);
         }
     }
 }
