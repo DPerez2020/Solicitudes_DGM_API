@@ -8,6 +8,6 @@ namespace Solicitudes_DGM.Application.Persona
     {
         new Task<List<PersonaModel>> GetAll();
 
-        Task<Domain.Entities.Persona.Persona> Insert(Domain.Entities.Persona.Persona persona);
+        Task<Domain.Entities.Persona.Persona> InsertValidate(Domain.Entities.Persona.Persona persona);
     }
 }

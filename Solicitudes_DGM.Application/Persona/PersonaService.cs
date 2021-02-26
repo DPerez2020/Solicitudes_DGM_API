@@ -34,7 +34,7 @@
             }).ToList();
         }
 
-        public async Task<Domain.Entities.Persona.Persona> Insert(Domain.Entities.Persona.Persona persona)
+        public async Task<Domain.Entities.Persona.Persona> InsertValidate(Domain.Entities.Persona.Persona persona)
         {
             //var person = new Domain.Entities.Persona.Persona
             //{

@@ -42,21 +42,39 @@
         [HttpPost]
         public async Task<Domain.Entities.Persona.Persona> Post([FromBody] Domain.Entities.Persona.Persona persona)
         {
-            return await this.personaService.Insert(persona);
+            try
+            {
+                return await this.personaService.InsertValidate(persona);
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
         }
 
         // PUT api/<PersonaController>/5
         [HttpPut("{id}")]
         public async Task<Domain.Entities.Persona.Persona> Put(int id, [FromBody] Domain.Entities.Persona.Persona persona)
         {
-            return await this.personaService.Update(persona);
+            try
+            {
+                return await this.personaService.Update(persona);
+            }
+            catch (System.Exception) { throw; }
         }
 
         // DELETE api/<PersonaController>/5
         [HttpDelete("{id}")]
         public async Task Delete(int id)
         {
-            await this.personaService.Delete(id);
+            try
+            {
+                await this.personaService.Delete(id);
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
         }
     }
 }
